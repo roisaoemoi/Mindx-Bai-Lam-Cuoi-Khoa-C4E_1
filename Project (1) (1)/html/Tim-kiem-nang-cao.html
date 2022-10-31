@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm nâng cao - TruyenQQ.Com</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="https://st.truyenqqpro.com/template/frontend/images/logo-icon.png">
+    <link rel="stylesheet" href="../css/Prcss.css">
+    <link rel="stylesheet" href="../css/Tim-kiem-nang-cao.css">
+    <link rel="stylesheet" href="../css/Tim_Truyen.css">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body onresize="responsive()" onload="responsive()" onclick="hidesearch()">
+        <div class ="narbar--menu__parent">
+                <div class="narbar--menu">
+                    <div class="narbar--menuright">
+                        <div class="img">
+                            <a href="./Htmlpr.html"><img src="https://st.truyenqqpro.com/template/frontend/images/logo.png" alt="logo"
+                                    class="img1"></a>
+                        </div>
+                        <div id="narbar--menu__light" onclick="load__light()">
+                            <div class="narbar--menu__lighticon"><i class="fa-regular fa-lightbulb"></i></div>
+                        </div>
+                        <div class="top_search" id="top_search">
+                            <input class="search" id="search_input" onclick="hide__topsearch()" onchange="hide__topsearch()" oninput="hide__topsearch()" placeholder="Bạn muốn tìm truyện gì">
+                            <button>
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                            <div class="search_result" id="search_result" >
+                                <ul id="top_search_result"></ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="narbar--menuleft">
+                        <a href="./login.html"><button class="narbar--menuleft__Dk">Đăng kí</button></a>
+                        <a href="./login.html"><button class="narbar--menuleft__Dn">Đăng nhập</button></a>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        <div id="narbar--option__parent">
+                <div id="narbar--option">
+                    <div class="narbar--option1 home--page">
+                        <a href="Htmlpr.html">Trang Chủ</a>
+                        <button id="narbar--hide__option" class="narbar--hide__option narbar--hide--true__option"></button>
+                    </div>
+                    <div id="narbar__option--hide">
+                        <div class="narbar--option1"><a href="#">Thể Loại</a></div>
+                        <div class="narbar--option1"><a href="#">Xếp Hạng</a></div>
+                        <div class="narbar--option1"><a href="#">Con Gái</a></div>
+                        <div class="narbar--option1"><a href="#">Con Trai</a></div>
+                        <div class="narbar--option1"><a href="./Tim-kiem-nang-cao.html">Tìm Truyện</a></div>
+                        <div class="narbar--option1"><a href="#">Lịch Sử</a></div>
+                        <div class="narbar--option1"><a href="#">Theo Dõi</a></div>
+                        <div class="narbar--option1"><a href="#">Tải App</a></div>
+                        <div class="narbar--option1"><a href="https://www.facebook.com/" target="_blank">Thảo Luận</a></div>
+                        <div class="narbar--option1"><a href="https://www.facebook.com/" target="_blank">Fanpage</a></div>
+                    </div>
+                </div>
+                
+        </div>
+    <div class="content">
+        <div class="main_content">
+                <div id="main_homepage">
+                                <div class="homepage_tags">
+                                        <h1>
+                                                <p class="text_list_update">
+                                                <i class="fa fa-font-awesome" aria-hidden="true"></i> Tìm kiếm nâng cao </p>
+                                        </h1>
+                                        <div class="clear"></div>
+                                </div>
+                                <div class="story-list-bl01 box">
+                                        <div class="text-center">
+                                                <button type="button" class="btn btn-info btn-collapse" id="hiden--search">Ẩn khung tìm kiếm</button>
+                                        </div>
+                                        <div class="advsearch-form " id="show__search--request" style="display: block;">
+                                                <div class="form-group clearfix">
+                                                <p><span class="icon-tick"></span> Tìm trong những thể loại này</p>
+                                                <p><span class="icon-cross"></span> Loại trừ những thể loại này</p>
+                                                <p><span class="icon-checkbox"></span> Truyện có thể thuộc hoặc không thuộc thể loại này</p>
+                                        </div>
+                                        <div class="form-group row text-center">
+                                                <a class="btn btn-primary btn-sm btn-reset" href="./Tim-kiem-nang-cao.html"><i class="fa fa-repeat"></i> Reset</a>
+                                        </div>
+                                        <div class="form-group row">
+                                        <div class="label-search">Thể loại truyện</div>
+                                        <div class="table__search--type">
+                                                <div class="genre-item" title="Thể loại này thường có nội dung về đánh nhau, bạo lực, hỗn loạn, với diễn biến nhanh">
+                                                        <span class="icon-checkbox" data-id="26">
+                                                        </span><p>Action</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại có đề cập đến vấn đề nhạy cảm, chỉ dành cho tuổi 17+">
+                                                        <span class="icon-checkbox" data-id="68">
+                                                        </span><p>Adult</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại phiêu lưu, mạo hiểm, thường là hành trình của các nhân vật">
+                                                        <span class="icon-checkbox" data-id="27">
+                                                        </span><p>Adventure</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện đã được chuyển thể thành film Anime">
+                                                        <span class="icon-checkbox" data-id="62">
+                                                        </span><p>Anime</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại này là những câu chuyện về người ở một thế giới này xuyên đến một thế giới khác, có thể là thế giới mang phong cách trung cổ với kiếm sĩ và ma thuật, hay thế giới trong game, hoặc có thể là bạn chết ở nơi này và được chuyển sinh đến nơi khác">
+                                                        <span class="icon-checkbox" data-id="91">
+                                                        </span><p>Chuyển Sinh</p>                           
+                                                </div>
+                                                <div class="genre-item" title="Truyện có nội dung xảy ra ở thời cổ đại phong kiến.">
+                                                        <span class="icon-checkbox" data-id="90">
+                                                        </span><p>Cổ Đại</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại có nội dung trong sáng và cảm động, thường có các tình tiết gây cười, các xung đột nhẹ nhàng">
+                                                        <span class="icon-checkbox" data-id="28">
+                                                        </span><p>Comedy</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện tranh Châu Âu và Châu Mĩ">
+                                                        <span class="icon-checkbox" data-id="60">
+                                                        </span><p>Comic</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Demons">
+                                                        <span class="icon-checkbox" data-id="99">
+                                                        </span><p>Demons</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại điều tra, trinh thám.">
+                                                        <span class="icon-checkbox" data-id="100">
+                                                        </span><p>Detective</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại truyện phóng tác do fan hay có thể cả những Mangaka khác với tác giả truyện gốc. Tác giả vẽ Doujinshi thường dựa trên những nhân vật gốc để viết ra những câu chuyện theo sở thích của mình">
+                                                        <span class="icon-checkbox" data-id="96">
+                                                        </span><p>Doujinshi</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại mang đến cho người xem những cảm xúc khác nhau: buồn bã, căng thẳng thậm chí là bi phẫn">
+                                                        <span class="icon-checkbox" data-id="29">
+                                                        </span><p>Drama</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện tình cảm giữa nam và nam.">
+                                                        <span class="icon-checkbox" data-id="93">
+                                                        </span><p>Đam Mỹ</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thường có những tình huống nhạy cảm nhằm lôi cuốn người xem">
+                                                        <span class="icon-checkbox" data-id="50">
+                                                        </span><p>Ecchi</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại xuất phát từ trí tưởng tượng phong phú, từ pháp thuật đến thế giới trong mơ thậm chí là những câu chuyện thần tiên">
+                                                        <span class="icon-checkbox" data-id="30">
+                                                        </span><p>Fantasy</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Là một thể loại trong đó giới tính của nhân vật bị lẫn lộn: nam hoá thành nữ, nữ hóa thành nam...">
+                                                        <span class="icon-checkbox" data-id="45">
+                                                        </span><p>Gender Bender</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại truyện tình cảm, lãng mạn mà trong đó, nhiều nhân vật nữ thích một nam nhân vật chính">
+                                                        <span class="icon-checkbox" data-id="47">
+                                                        </span><p>Harem</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại có liên quan đến thời xa xưa, lịch sử.">
+                                                        <span class="icon-checkbox" data-id="51">
+                                                        </span><p>Historical</p>
+                                                </div>
+                                                <div class="genre-item" title="Horror là: rùng rợn, nghe cái tên là bạn đã hiểu thể loại này có nội dung thế nào. Nó làm cho bạn kinh hãi, khiếp sợ, ghê tởm, run rẩy, có thể gây sock - một thể loại không dành cho người yếu tim">
+                                                        <span class="icon-checkbox" data-id="44">
+                                                        </span><p>Horror</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện có yếu tố phép thuật, kỳ ảo… được đặt trong bối cảnh siêu tưởng (tiên giới, ma giới…)">
+                                                        <span class="icon-checkbox" data-id="468">
+                                                        </span><p>Huyền Huyễn</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Isekai, đôi khi còn được gọi là xuyên không hay chuyển sinh, là một tiểu thể loại light novel, manga, anime và video game kỳ ảo của Nhật Bản, xoay quanh một người bình thường được đưa đến hoặc bị mắc kẹt trong một vũ trụ song song.">
+                                                        <span class="icon-checkbox" data-id="85">
+                                                        </span><p>Isekai</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại của manga hay anime được sáng tác chủ yếu bởi phụ nữ cho những độc giả nữ từ 18 đến 30. Josei manga có thể miêu tả những lãng mạn thực tế , nhưng trái ngược với hầu hết các kiểu lãng mạn lí tưởng của Shoujo manga với cốt truyện rõ ràng, chín chắn">
+                                                        <span class="icon-checkbox" data-id="54">
+                                                        </span><p>Josei</p>                            
+                                                </div>
+                                                <div class="genre-item" title="">
+                                                        <span class="icon-checkbox" data-id="69">
+                                                        </span><p>Mafia</p>                           
+                                                </div>
+                                                <div class="genre-item" title="Thể loại&nbsp;giả tưởng có tồn tại những sức mạnh siêu nhiên như thần chú, gây phép, vòng tròn ma thuật...&nbsp;">
+                                                        <span class="icon-checkbox" data-id="58">
+                                                        </span><p>Magic</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện tranh của Trung Quốc">
+                                                        <span class="icon-checkbox" data-id="35">
+                                                        </span><p>Manhua</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện tranh Hàn Quốc, đọc từ trái sang phải">
+                                                        <span class="icon-checkbox" data-id="49">
+                                                        </span><p>Manhwa</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Giống với tên gọi, bất cứ gì liên quan đến võ thuật trong truyện từ các trận đánh nhau, tự vệ đến các môn võ thuật như akido, karate, judo hay taekwondo, kendo, các cách né tránh">
+                                                        <span class="icon-checkbox" data-id="41">
+                                                        </span><p>Martial Arts</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại dành cho lứa tuổi 17+ bao gồm các pha bạo lực, máu me, chém giết, tình dục ở mức độ vừa">
+                                                        <span class="icon-checkbox" data-id="48">
+                                                        </span><p>Mature</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện Quân Sự">
+                                                        <span class="icon-checkbox" data-id="101">
+                                                        </span><p>Military</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại thường xuất hiện những điều bí ấn không thể lí giải được và sau đó là những nỗ lực của nhân vật chính nhằm tìm ra câu trả lời thỏa đáng">
+                                                        <span class="icon-checkbox" data-id="39">
+                                                        </span><p>Mystery</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Truyện thuộc kiểu lãng mạn, kể về những sự kiện vui buồn trong tình yêu của nhân vật chính.">
+                                                        <span class="icon-checkbox" data-id="87">
+                                                        </span><p>Ngôn Tình</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Những truyện ngắn, thường là 1 chapter">
+                                                        <span class="icon-checkbox" data-id="95">
+                                                        </span><p>One shot</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại liên quan đến những vấn đề về tâm lý của nhân vật ( tâm thần bất ổn, điên cuồng ...)">
+                                                        <span class="icon-checkbox" data-id="40">
+                                                        </span><p>Psychological</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thường là những câu chuyện về tình yêu, tình cảm lãng mạn. Ớ đây chúng ta sẽ lấy ví dụ như tình yêu giữa một người con trai và con gái, bên cạnh đó đặc điểm thể loại này là kích thích trí tưởng tượng của bạn về tình yêu">
+                                                        <span class="icon-checkbox" data-id="36">
+                                                        </span><p>Romance</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Trong thể loại này, ngữ cảnh diễn biến câu chuyện chủ yếu ở trường học">
+                                                        <span class="icon-checkbox" data-id="37">
+                                                        </span><p>School Life</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Bao gồm những chuyện khoa học viễn tưởng, đa phần chúng xoay quanh nhiều hiện tượng mà liên quan tới khoa học, công nghệ, tuy vậy thường thì những câu chuyện đó không gắn bó chặt chẽ với các thành tựu khoa học hiện thời, mà là do con người tưởng tượng ra">
+                                                        <span class="icon-checkbox" data-id="43">
+                                                        </span><p>Sci-fi</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại của manga thường nhằm vào những đối tượng nam 18 đến 30 tuổi, nhưng người xem có thể lớn tuổi hơn, với một vài bộ truyện nhắm đến các doanh nhân nam quá 40. Thể loại này có nhiều phong cách riêng biệt , nhưng thể loại này có những nét riêng biệt, thường được phân vào những phong cách nghệ thuật rộng hơn và phong phú hơn về chủ đề, có các loại từ mới mẻ tiên tiến đến khiêu dâm">
+                                                        <span class="icon-checkbox" data-id="42">
+                                                        </span><p>Seinen</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Đối tượng hướng tới của thể loại này là phái nữ. Nội dung của những bộ manga này thường liên quan đến tình cảm lãng mạn, chú trọng đầu tư cho nhân vật (tính cách,...)">
+                                                        <span class="icon-checkbox" data-id="38">
+                                                        </span><p>Shoujo</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại quan hệ hoặc liên quan tới đồng tính nữ, thể hiện trong các mối quan hệ trên mức bình thường giữa các nhân vật nữ trong các manga, anime">
+                                                        <span class="icon-checkbox" data-id="98">
+                                                        </span><p>Shoujo Ai</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Đối tượng hướng tới của thể loại này là phái nam. Nội dung của những bộ manga này thường liên quan đến đánh nhau và/hoặc bạo lực (ở mức bình thường, không thái quá)">
+                                                        <span class="icon-checkbox" data-id="31">
+                                                        </span><p>Shounen</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại có nội dung về tình yêu giữa những chàng trai trẻ, mang tính chất lãng mạn nhưng ko đề cập đến quan hệ tình dục">
+                                                        <span class="icon-checkbox" data-id="86">
+                                                        </span>Shounen Ai                            
+                                                </div>
+                                                <div class="genre-item" title="Nói về cuộc sống đời thường">
+                                                        <span class="icon-checkbox" data-id="46">
+                                                        </span><p>Slice of life</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Những truyện có nội dung hơi nhạy cảm, đặc biệt là liên quan đến tình dục">
+                                                        <span class="icon-checkbox" data-id="97">
+                                                        </span><p>Smut</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Đúng như tên gọi, những môn thể thao như bóng đá, bóng chày, bóng chuyền, đua xe, cầu lông,... là một phần của thể loại này">
+                                                        <span class="icon-checkbox" data-id="57">
+                                                        </span><p>Sports</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể hiện những sức mạnh đáng kinh ngạc và không thể giải thích được, chúng thường đi kèm với những sự kiện trái ngược hoặc thách thức với những định luật vật lý">
+                                                        <span class="icon-checkbox" data-id="32">
+                                                        </span><p>Supernatural</p>                           
+                                                </div>
+                                                <div class="genre-item" title="Thể loại chứa đựng những sự kiện mà dẫn đến kết cục là những mất mát hay sự rủi ro to lớn">
+                                                        <span class="icon-checkbox" data-id="52">
+                                                        </span><p>Tragedy</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Trọng sinh là thể loại mà nhân vật chính vì một lý do nào đó chết đi rồi đầu thai vào kiếp khác nhưng vẫn giữ lại được kí ức của mình ở kiếp trước.">
+                                                        <span class="icon-checkbox" data-id="82">
+                                                        </span><p>Trọng Sinh</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Tổng hợp truyện tranh màu, rõ, đẹp">
+                                                        <span class="icon-checkbox" data-id="92">
+                                                        </span><p>Truyện Màu</p>                          
+                                                </div>
+                                                <div class="genre-item" title="Là truyện tranh được đăng dài kỳ trên internet của Hàn Quốc chứ không xuất bản theo cách thông thường">
+                                                        <span class="icon-checkbox" data-id="55">
+                                                        </span><p>Webtoon</p>                           
+                                                </div>
+                                                <div class="genre-item" title="Xuyên Không, Xuyên Việt là thể loại nhân vật chính vì một lý do nào đó mà bị đưa đến sinh sống ở một không gian hay một khoảng thời gian khác. Nhân vật chính có thể trực tiếp xuyên qua bằng thân xác mình hoặc sống lại bằng thân xác người khác.">
+                                                        <span class="icon-checkbox" data-id="88">
+                                                        </span><p>Xuyên Không</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại&nbsp;về tình yêu giữa đồng tính nam, có thể có cảnh sex">
+                                                        <span class="icon-checkbox" data-id="70">
+                                                        </span><p>Yaoi</p>                            
+                                                </div>
+                                                <div class="genre-item" title="Thể loại&nbsp;về đồng tính nữ, có thể có cảnh sex">
+                                                        <span class="icon-checkbox" data-id="75">
+                                                        </span><p>Yuri</p>                            
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="form-group row" style="display: flex; align-items: center;">
+                                        <div class="label-search">Quốc gia</div>
+                                        <div class="select select-search is-warning">
+                                                <select class="custom-select" id="country">
+                                                        <option value="0">Tất cả</option>
+                                                        <option value="1">Trung Quốc</option>
+                                                        <option value="2">Việt Nam</option>
+                                                        <option value="3">Hàn Quốc</option>
+                                                        <option value="4">Nhật Bản</option>
+                                                        <option value="5">Mỹ</option>
+                                                </select>
+                                        </div>
+
+                                        <div class="label-search">Tình Trạng</div>
+                                        <div class="select select-search is-warning">
+                                                <select class="custom-select" id="status">
+                                                        <option value="-1">Tất cả</option>
+                                                        <option value="0">Đang tiến hành</option>
+                                                        <option value="2">Hoàn thành</option>
+                                                </select>
+                                        </div>
+                                </div>
+                                <div class="form-group row" style="display: flex; align-items: center;">
+                                        <div class="label-search">Số lượng chương</div>
+                                        <div class="select select-search is-warning">
+                                                <select class="custom-select" id="minchapter">
+                                                        <option value="0">&gt; 0</option>
+                                                        <option value="50">&gt;= 50</option>
+                                                        <option value="100">&gt;= 100</option>
+                                                        <option value="200">&gt;= 200</option>
+                                                        <option value="300">&gt;= 300</option>
+                                                        <option value="400">&gt;= 400</option>
+                                                        <option value="500">&gt;= 500</option>
+                                                </select>
+                                        </div>
+                                        <div class="label-search">Sắp xếp</div>
+                                        <div class="select select-search is-warning">
+                                                <select class="custom-select" id="sort">
+                                                        <option value="0">Ngày đăng giảm dần</option>
+                                                        <option value="1">Ngày đăng tăng dần</option>
+                                                        <option value="2">Ngày cập nhật giảm dần</option>
+                                                        <option value="3">Ngày cập nhật tăng dần</option>
+                                                        <option value="4">Lượt xem giảm dần</option>
+                                                        <option value="5">Lượt xem tăng dần</option>
+                                                </select>
+                                        </div>
+                                </div>
+                                <div class="form-group clearfix">
+                                <div class="text-center">
+                                        <button type="button" class="btn btn-success btn-search is-danger" id="search--request">Tìm kiếm</button>
+                                </div>
+                                </div>
+                        </div>
+                        </div>
+                        <div class="list_grid_out">
+                                <ul class="list_grid grid" id="search--ouput"></ul>
+                        </div>
+                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        </li>
+        </ul>
+        </div>
+    <div class="clear"></div>
+
+
+    <script src="../js/comics.js"></script>
+    <script src="../js/Tim_Truyen.js"></script>
+    <script src="../js/Tim-kiem-nang-cao.js"></script>
+    <script src="../js/Pr.js"></script>
+</body>
+</html>

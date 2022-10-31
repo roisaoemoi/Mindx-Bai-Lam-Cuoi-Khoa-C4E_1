@@ -1,0 +1,21 @@
+.page_redirect {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 5px 0px;
+}
+.hihi {
+    border: 1px solid orangered;
+    padding: 10px;
+    border-radius: 60%;
+    background-color: #ebebeb;
+}
+p.text__footer {
+    border: none;
+}
+p.text__footer:hover{
+    background-color: #ebebeb;
+}
+p:hover{
+    background-color: #f18121;
+}

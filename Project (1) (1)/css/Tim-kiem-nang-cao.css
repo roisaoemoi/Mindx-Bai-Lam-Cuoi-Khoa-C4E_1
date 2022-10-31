@@ -1,0 +1,357 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Quicksand,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #ebebeb;
+}
+.content {
+    width:100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#main_homepage {
+    padding-bottom: 20px;
+    width:100%;
+}
+
+.homepage_tags {
+    color: #f18121;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    min-height: 60px;
+}
+
+.homepage_tags h1 {
+    float: left;
+}
+
+.text_list_update {
+    color: #56ccf2 !important;
+    font-size: 20px !important;
+    font-weight: 600;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.main_content {
+    width: 1200px;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+}
+
+.text-center {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.advsearch-form {
+    width:100%;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.table__search--type{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.icon-checkbox, .icon-cross, .icon-tick {
+    display: inline-block;
+    background: url('../images/icon-checkbox.png') no-repeat #fff;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 15%) inset;
+}
+
+.icon-checkbox {
+    background-position: 0 -18px;
+}
+
+.icon-tick {
+    background-position: 0 -36px;
+}
+
+.icon-cross {
+    background-position: 0 0;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none!important;
+    color: inherit;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.label-search {
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 24%;
+}
+
+.genre-item {
+    width: 30%;
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.label-search {
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 24%;
+}
+
+.select-search {
+    width: 24%;
+    display: inline-block;
+}
+
+.select select {
+    width:100%;
+    background-color: #fff;
+    border:1px solid #dbdbdb;
+    color: #363636;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    max-width: 100%;
+    outline: 0;
+}
+
+.select select {
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-left: calc(0.625em - 1px);
+    padding-right: calc(0.625em - 1px);
+    padding-top: calc(0.375em - 1px);
+    position: relative;
+    vertical-align: top;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+}
+
+ol, ul {
+    list-style: outside none none;
+}
+.list_grid li {
+    width: 180px;
+    float: left;
+    margin: 10px;
+}
+.list_grid li .book_avatar {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    position: relative;
+}
+a {
+    cursor: pointer;
+    text-decoration: none!important;
+    color: inherit;
+}
+.list_grid li .book_avatar img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+.top-notice {
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    font-size: 0;
+}
+.top-notice span {
+    
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px 3px;
+}
+.top-notice .time-ago {
+    border-radius: 5px;
+    background-color: #56ccf2;
+    margin-right: 5px;
+}
+.top-notice .type-label.new {
+    background-color: #fa0;
+}
+.top-notice .type-label.hot {
+    background-color: #ff2853;
+}
+
+.list_grid li .book_info .book_name {
+    text-align: center;
+    line-height: 35px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 7px;
+    height: 35px;
+    max-width: 100%;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+.list_grid li .book_info .book_name h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list_grid li .text_detail {
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    display: none;
+}
+.list_grid li .text_detail span {
+    margin-left: 10px;
+}
+.list_grid li .text_detail span .fa-bookmark {
+    color: #ff2853;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.list_grid .book_info .last_chapter {
+    font-size: 12px;
+    text-align: center;
+}
+.list_grid .book_info .last_chapter a {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+@media (max-width:1199px)
+{
+    .main_content{
+        width:100%;
+        min-height: inherit
+    }
+
+}
+
+@media (max-width:599px)
+{
+    .genre-item{
+        width:45%;
+    }
+}
+
+@media (max-width:350px)
+{
+    .genre-item{
+        width:95%;
+    }
+}
+
+
+
